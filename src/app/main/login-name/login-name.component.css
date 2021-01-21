@@ -125,7 +125,7 @@ form input{
 }
 .arrow{
     display: none;
-    background-image: url("../../../assets/first/img/succes.png");
+    background-image: url("/assets/first/img/succes.png");
     width: 13px;
     height: 10px;
     position: absolute;
@@ -134,7 +134,7 @@ form input{
 }
 .arrow2{
     display: none;
-    background-image: url("../../../assets/first/img/succes.png");
+    background-image: url("/assets/first/img/succes.png");
     width: 13px;
     height: 10px;
     position: absolute;

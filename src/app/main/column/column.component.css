@@ -25,7 +25,7 @@
     width: 21px;
     height: 17px;
     background: transparent;
-    background-image: url("../../../assets/first/img/arrow.png");
+    background-image: url("/assets/first/img/arrow.png");
     background-size: cover;
 }
 .main__subtitle{
@@ -41,7 +41,7 @@
 }
 
 .main__techlogo{
-    background-image: url('../../../assets/first/img/techlogo.png');
+    background-image: url('/assets/first/img/techlogo.png');
     width: 88px;
     height: 24px;
     margin-top: 25px;
