@@ -1,0 +1,21 @@
+<main class="main">
+	<div class="container">
+		<ng-template [ngIf]="complete" [ngIfElse]="login">
+			<app-complete></app-complete>
+		</ng-template>
+		<ng-template #login>
+			<ng-template [ngIf]="checkForm" [ngIfElse]="loginName">
+				<div class="main__row default">
+					<app-login-company (backBtn)="infoFromChild($event)" (complete)="regComplete($event)"></app-login-company>
+					<app-column></app-column>
+				</div>
+			</ng-template>
+			<ng-template #loginName>
+				<div class="main__row default">
+					<app-login-name (isValid)="infoFromChild($event)"></app-login-name>
+					<app-column></app-column>
+				</div>
+			</ng-template>
+		</ng-template>	
+	</div>
+</main>

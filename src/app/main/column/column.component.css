@@ -1,0 +1,57 @@
+
+.main__column{
+
+}
+.main__title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+.mail__list{
+    margin-top: 8px;
+}
+.main__item{
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 30px;
+    position: relative;
+}
+.main__item:before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 21px;
+    height: 17px;
+    background: transparent;
+    background-image: url("../../../assets/first/img/arrow.png");
+    background-size: cover;
+}
+.main__subtitle{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+.side__body .main__row{
+    display: grid;
+    grid-template: 1fr / repeat(3,108px);
+    grid-auto-flow: row;
+}
+
+.main__techlogo{
+    background-image: url('../../../assets/first/img/techlogo.png');
+    width: 88px;
+    height: 24px;
+    margin-top: 25px;
+}
+@media (max-width:767px) {
+    .main__column{
+        padding: 63px 10px 240px 10px;
+        background-position: top right;
+    }
+    .side__body .main__row{
+        grid-template: 1fr / repeat(3,100px);
+    }
+}

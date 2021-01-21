@@ -1,0 +1,48 @@
+<div class="main__form">
+	<div class="form__wrap">
+		<div class="main__logo">
+			<img src="../../../assets/second/img/logo.png" alt="">
+		</div>
+		<div class="form__title">Try <span class="brand">Met Jip</span> for free</div>
+		<div class="form__text">Try Met Jip for free for 14 days. Do you already have a login than you can. <a href="index.html">Login here</a></div>
+		<div class="main__login">
+			<form class="main__form-login" (submit)="send($event)">
+				<label for="company">Company</label>
+				<input type="text" class="form__company {{companyError}}" id="company" (input)="handleCompany($event)">
+				<div class="arrow {{companyArrow}}"></div>
+				<label for="phonenumber">Phone number</label>
+				<input [imask]="{mask: '+{38}(000)000-00-00'}" [unmask]="true" type="text" maxlength="17" class="form__phonenumber {{phoneError}}" id="phonenumber" onkeyup="this.value = this.value.replace(/[^0-9 ]+$/g,'');" value="+380" (input)="handlePhone($event)">
+				<div class="arrow2 {{phoneArrow}}"></div>
+				<label for="password">Password</label>
+				<input type="password" class="form__password {{passwordError}}" id="password" (input)="handlePassword($event)">
+				<div class="arrow3 {{passwordArrow}}"></div>
+				<label class="form__checkbox"><input type="checkbox" id="checkbox" (change)="handleCheckbox($event)">Accept <u class="links" (click)="showModal()">Privacy Statementu</u>  and <u class="links" (click)="showModal()">Terms & Conditions</u></label>
+				<div class="error {{checkboxError}}">Please agree to continue</div>
+				<div class="form__links">
+					<div (click)="back()">Back</div>
+					<button type="submit" class="form__btn {{formBtn}}" ng-disabled="checkForm">Create free account</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal {{modal}}" (click)="closeModal()">
+    <div class="modal__block">
+        <div class="modal__close" (click)="closeModal()">X</div>
+        <div class="modal__title">Privacy Statement </div>
+        <div class="modal__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam malesuada bibendum. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies.</p>
+            <p>Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor posuere ac ut consequat semper viverra. At quis risus sed vulputate odio ut enim blandit.
+            <p>Ornare massa eget egestas purus viverra accumsan. Mattis rhoncus urna neque viverra justo nec. Adipiscing diam donec adipiscing tristique risus nec feugiat. Amet massa vitae tortor condimentum. At varius vel pharetra vel. Porttitor eget dolor morbi non arcu risus quis varius. Id donec ultrices tincidunt arcu. Aliquet enim tortor at auctor urna nunc id cursus. Rhoncus dolor purus non enim praesent elementum facilisis leo.</p>
+        </div>
+        <div class="modal__subtitle">Amet massa vitae tortor</div>
+        <div class="modal__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam malesuada bibendum. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Aliquet nibh praesent tristique magna sit amet. Convallis aenean et tortor at risus viverra. Tristique sollicitudin nibh sit amet commodo. Integer enim neque volutpat ac tincidunt vitae semper. Rhoncus urna neque viverra justo nec ultrices.</p>
+            <p>Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor posuere ac ut consequat semper viverra. At quis risus sed vulputate odio ut enim blandit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam malesuada bibendum. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Aliquet nibh praesent tristique magna sit amet. Convallis aenean et tortor at risus viverra. Tristique sollicitudin nibh sit amet commodo. Integer enim neque volutpat ac tincidunt vitae semper. Rhoncus urna neque viverra justo nec ultrices.</p>
+            <p>Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor posuere ac ut consequat semper viverra. At quis risus sed vulputate odio ut enim blandit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate sapien nec sagittis aliquam malesuada bibendum. Vulputate ut pharetra sit amet aliquam id diam maecenas ultricies. Aliquet nibh praesent tristique magna sit amet. Convallis aenean et tortor at risus viverra. Tristique sollicitudin nibh sit amet commodo. Integer enim neque volutpat ac tincidunt vitae semper. Rhoncus urna neque viverra justo nec ultrices.</p>
+            <p>Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor posuere ac ut consequat semper viverra. At quis risus sed vulputate odio ut enim blandit.</p>
+        </div>
+    </div>
+</div>

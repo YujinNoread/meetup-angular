@@ -1,0 +1,28 @@
+<div class="main__form">
+	<div class="form__wrap">
+		<div class="main__logo">
+			<img src="assets/first/img/logo.png" alt="">
+		</div>
+		<div class="form__title">Try <span class="brand">Met Jip</span> for free</div>
+		<div class="form__text">Try Met Jip for free for 14 days. Do you already have a login than you can. <a href="index.html">Login here</a></div>
+		<div class="main__login">
+			<form class="main__form-login" (submit)="sendToParent($event)">
+				<div class="main__row">
+					<div class="main__columns">
+						<label for="fullname">Fullname</label>
+						<input type="text" class="form__fullname" id="fullname" (input)="handleFullName($event)">
+						<div class="arrow {{fullNameArrow}}"></div>
+					</div>
+					<div class="main__columns">
+						<label for="firstname">Firstname</label>
+						<input type="text" class="form__firstname" id="firstname" (input)="handleFirstName($event)">
+						<div class="arrow2 {{firstNameArrow}}"></div>
+					</div>
+				</div>
+				<input type="email" class="form__email {{emailSuccess}}" placeholder="Email" id="email" (input)="handleEmail($event)">
+				<div class="error {{emailError}}">Please give us some details</div>
+				<button type="submit" class="form__btn {{formBtn}}" ng-disabled="formValid">Next</button>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,60 @@
+.main{
+
+}
+.default{
+
+}
+app-complete,app-login-name,app-login-company,app-column{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+}
+.container{
+    width: 1360px;
+    margin: 0 auto;
+}
+.main__row{
+    display: flex;
+    justify-content: space-between;
+} 
+app-complete{
+    text-align: center;
+}  
+app-login-name{
+    background: #fff;
+    flex: 0 0 50%;
+    padding: 10% 0;
+}
+app-login-company{
+    background: #fff;
+    flex: 0 0 50%;
+    padding: 5% 0;
+}
+app-column{
+    flex: 0 0 50%;
+    background-image: url("../../assets/first/img/background.jpg");
+    background-size: cover;     
+    background-position: top -52px right -52px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+}
+@media (max-width:767px) {
+    .container{
+        width: 320px;
+    }
+    .main__row{
+        flex-wrap: wrap;
+    }
+    app-login-name{
+        flex: 0 0 100%;
+    }
+    app-column{
+        flex: 0 0 100%;
+        background-position: top right;
+    }
+    app-login-company{
+        flex: 0 0 100%; 
+    }
+}
