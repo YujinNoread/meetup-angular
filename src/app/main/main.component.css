@@ -31,7 +31,7 @@ app-login-company{
 }
 app-column{
     flex: 0 0 50%;
-    background-image: url("/assets/first/img/background.jpg");
+    background-image: url("https://yujinnoread.github.io/meetup-angular/assets/first/img/background.jpg");
     background-size: cover;     
     background-position: top -52px right -52px;
     background-repeat: no-repeat;
