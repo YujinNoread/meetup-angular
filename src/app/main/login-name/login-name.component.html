@@ -11,18 +11,20 @@
 					<div class="main__columns">
 						<label for="fullname">Fullname</label>
 						<input type="text" class="form__fullname" id="fullname" (input)="handleFullName($event)">
-						<div class="arrow {{fullNameArrow}}"></div>
+						<div [ngClass]="(fullNameValid)?'visible arrow':'arrow'"></div>
 					</div>
 					<div class="main__columns">
 						<label for="firstname">Firstname</label>
 						<input type="text" class="form__firstname" id="firstname" (input)="handleFirstName($event)">
-						<div class="arrow2 {{firstNameArrow}}"></div>
+						<div [ngClass]="(firstNameValid)?'arrow2 visible':'arrow2'"></div>
 					</div>
 				</div>
 				<input type="email" class="form__email {{emailSuccess}}" placeholder="Email" id="email" (input)="handleEmail($event)">
 				<div class="error {{emailError}}">Please give us some details</div>
-				<button type="submit" class="form__btn {{formBtn}}" ng-disabled="formValid">Next</button>
+				<button type="submit" [ngClass]="(formValid)?'form__btn':'disabled form__btn'" ng-disabled="formValid">Next</button>
 			</form>
 		</div>
 	</div>
 </div>
+<!-- class="form__email {{emailSuccess}}" -->
+<!-- [ngClass]="(emailValid)?'form__email':'invalid form__email'" -->
